@@ -5,7 +5,7 @@ import styles from './Community.module.css';
 const Community = () => {
   const [email, setEmail] = useState('');
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     // Here would be the email subscription functionality
     alert('Thank you for subscribing to $ASKOLD updates!');
