@@ -1,0 +1,417 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(19, 12, 24, 0.6);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid rgba(179, 146, 67, 0.15);
+  }
+  
+  .scrolled {
+    background: rgba(19, 12, 24, 0.9);
+    height: 70px;
+  }
+  
+  .runicBorder {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right,
+      rgba(179, 146, 67, 0) 0%,
+      rgba(179, 146, 67, 0.6) 50%,
+      rgba(179, 146, 67, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .scrolled .runicBorder {
+    opacity: 1;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 24px;
+    font-weight: 800;
+    transition: transform 0.3s ease;
+  }
+  
+  .logoLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .logoWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logoIcon {
+    width: 36px;
+    height: 36px;
+    background: #b39243;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(179, 146, 67, 0.6);
+    box-shadow: 0 0 10px rgba(179, 146, 67, 0.3);
+  }
+  
+  .logoIcon span {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-weight: 900;
+    color: #271629;
+    font-size: 20px;
+    z-index: 1;
+  }
+  
+  .logoGlow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .logoLink:hover .logoGlow {
+    opacity: 0.3;
+    animation: orbRotate 2s linear infinite;
+  }
+  
+  @keyframes orbRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .logoText {
+    color: #b39243;
+    font-weight: 800;
+    letter-spacing: 2px;
+    position: relative;
+  }
+  
+  .logoText::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, 
+      rgba(179, 146, 67, 0) 0%,
+      rgba(179, 146, 67, 0.7) 50%,
+      rgba(179, 146, 67, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .logoLink:hover .logoText::after {
+    opacity: 1;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+  }
+  
+  .nav li {
+    position: relative;
+  }
+  
+  .nav a {
+    font-family: 'Cinzel', 'Garamond', serif;
+    text-decoration: none;
+    color: #f1e3c4;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: block;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .linkHover {
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: #b39243;
+    transition: all 0.3s ease;
+  }
+  
+  .nav a:hover {
+    color: #b39243;
+  }
+  
+  .nav a:hover .linkHover {
+    width: 70%;
+    left: 15%;
+  }
+  
+  .activeLink {
+    color: #b39243 !important;
+  }
+  
+  .activeLink::before {
+    content: '•';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    color: #b39243;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+  
+  .activeLink .linkHover {
+    width: 70%;
+    left: 15%;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .buyBtn {
+    font-family: 'Cinzel', 'Garamond', serif;
+    padding: 10px 24px;
+    border-radius: 2px;
+    background: #b39243;
+    color: #130c18;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(179, 146, 67, 0.3);
+    border: 1px solid rgba(179, 146, 67, 0.6);
+  }
+  
+  .btnText {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btnShine {
+    position: absolute;
+    top: -180%;
+    left: -50%;
+    width: 40px;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.8);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .buyBtn:hover {
+    background: #cea745;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(179, 146, 67, 0.5);
+  }
+  
+  .buyBtn:hover .btnShine {
+    left: 140%;
+    opacity: 0.3;
+    transition: all 0.7s ease;
+  }
+  
+  .mobileMenuBtn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .mobileMenuBtn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #b39243;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .mobileMenuBtn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .mobileMenuBtn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobileMenuBtn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  @media (max-width: 991px) {
+    .mobileMenuBtn {
+      display: flex;
+    }
+  
+    .nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: rgba(19, 12, 24, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 100px 40px;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+      border-left: 1px solid rgba(179, 146, 67, 0.15);
+    }
+  
+    .nav.active {
+      right: 0;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+  
+    .nav li {
+      width: 100%;
+    }
+  
+    .nav a {
+      font-size: 18px;
+      padding: 15px 0;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid rgba(179, 146, 67, 0.1);
+    }
+  
+    .linkHover {
+      display: none;
+    }
+    
+    .activeLink::before {
+      left: -15px;
+    }
+  
+    .actions {
+      position: fixed;
+      bottom: 40px;
+      right: -100%;
+      width: 70%;
+      transition: right 0.3s ease;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .nav.active ~ .actions {
+      right: 0;
+    }
+  
+    .buyBtn {
+      width: 80%;
+      text-align: center;
+      padding: 15px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      height: 70px;
+    }
+    
+    .scrolled {
+      height: 60px;
+    }
+    
+    .logoIcon {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .logoText {
+      font-size: 20px;
+    }
+    
+    .nav {
+      width: 80%;
+    }
+    
+    .actions {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav {
+      width: 100%;
+      padding: 100px 30px;
+    }
+    
+    .actions {
+      width: 100%;
+    }
+    
+    .buyBtn {
+      width: 85%;
+      font-size: 13px;
+    }
+    
+    .logoIcon {
+      width: 28px;
+      height: 28px;
+    }
+    
+    .logoIcon span {
+      font-size: 16px;
+    }
+    
+    .logoText {
+      font-size: 18px;
+    }
+  }

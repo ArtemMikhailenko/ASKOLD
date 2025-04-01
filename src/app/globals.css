@@ -1,26 +1,283 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Baskerville', 'Times New Roman', serif;
+  color: #f1e3c4;
+  line-height: 1.5;
+  background: #18121e;
+  overflow-x: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 15L25 35L15 55M45 15L35 35L45 55M30 5L30 55' stroke='%23301934' stroke-width='0.8' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', 'Garamond', serif;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #271629;
+  border-left: 1px solid #3d2a40;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b39243;
+  border-radius: 0;
+  border: 2px solid #271629;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cea745;
+}
+
+::selection {
+  background: rgba(179, 146, 67, 0.3);
+  color: #f1e3c4;
+}
+
+/* Древнерусские анимации и эффекты */
+@keyframes fadeInSlav {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glowGolden {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(179, 146, 67, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(179, 146, 67, 0.5);
+  }
+}
+
+@keyframes shimmerRune {
+  0% {
+    background-position: -100px 0;
+  }
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+/* Декоративные элементы и классы */
+.runic-border {
+  position: relative;
+}
+
+.runic-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0 L10 5 L20 0 L30 5 L40 0' fill='none' stroke='%23b39243' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  opacity: 0.7;
+}
+
+.runic-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 L10 0 L20 5 L30 0 L40 5' fill='none' stroke='%23b39243' stroke-width='1'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  opacity: 0.7;
+}
+
+.section-divider {
+  height: 40px;
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 L10 0 L20 10 L30 0 L40 10 L50 0 L60 10 L70 0 L80 10 L90 0 L100 10' stroke='%23b39243' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  margin: 20px 0;
+  opacity: 0.4;
+}
+
+.golden-text {
+  color: #b39243;
+  font-weight: 600;
+}
+
+.golden-gradient {
+  background: linear-gradient(to right, #b39243, #cea745, #b39243);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.rune-accent {
+  position: relative;
+  display: inline-block;
+  padding: 0 3px;
+}
+
+.rune-accent::before {
+  content: '⌘';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #b39243;
+  opacity: 0.7;
+}
+
+.rune-accent::after {
+  content: '⌘';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  font-size: 14px;
+  color: #b39243;
+  opacity: 0.7;
+}
+
+/* Анимационные классы */
+.appear {
+  opacity: 0;
+  animation: fadeInSlav 1s forwards;
+}
+
+.appear-delay-1 {
+  opacity: 0;
+  animation: fadeInSlav 1s forwards 0.2s;
+}
+
+.appear-delay-2 {
+  opacity: 0;
+  animation: fadeInSlav 1s forwards 0.4s;
+}
+
+.glow-effect {
+  animation: glowGolden 3s infinite;
+}
+
+.shimmer {
+  background: linear-gradient(to right, 
+    rgba(179, 146, 67, 0) 0%, 
+    rgba(179, 146, 67, 0.3) 50%, 
+    rgba(179, 146, 67, 0) 100%
+  );
+  background-size: 200px 100%;
+  animation: shimmerRune 3s infinite linear;
+}
+
+/* Медиа запросы */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+  
+  h1 {
+    font-size: 1.9rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .runic-border::before,
+  .runic-border::after {
+    background-size: 30px 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+  
+  h1 {
+    font-size: 1.7rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .rune-accent::before,
+  .rune-accent::after {
+    font-size: 12px;
+  }
 }

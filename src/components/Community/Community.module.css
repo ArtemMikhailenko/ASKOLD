@@ -1,0 +1,571 @@
+.community {
+    position: relative;
+    padding: 120px 0 100px;
+    background: linear-gradient(to bottom, rgba(19, 12, 24, 0.9), rgba(27, 14, 33, 0.9));
+    color: #f1e3c4;
+    overflow: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+  
+  .subtitle {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 18px;
+    color: #b39243;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #b39243;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+  }
+  
+  .titleDecoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  
+  .titleDecoration span {
+    display: block;
+    height: 1px;
+  }
+  
+  .titleDecoration span:first-child,
+  .titleDecoration span:last-child {
+    background: #b39243;
+    width: 30px;
+    opacity: 0.7;
+  }
+  
+  .titleDecoration span:nth-child(2) {
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background: #b39243;
+    opacity: 0.9;
+  }
+  
+  .description {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+  
+  .content {
+    margin-bottom: 60px;
+  }
+  
+  /* Social Media Cards Grid */
+  .socialsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .socialCard {
+    background: rgba(39, 22, 41, 0.4);
+    border: 1px solid rgba(179, 146, 67, 0.2);
+    padding: 25px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .socialCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(179, 146, 67, 0.5);
+  }
+  
+  .socialCard:hover .cardGlow {
+    opacity: 0.2;
+  }
+  
+  .cardGlow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(179, 146, 67, 0.4) 0%, rgba(179, 146, 67, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .socialIcon {
+    background: rgba(179, 146, 67, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 1px solid rgba(179, 146, 67, 0.3);
+  }
+  
+  .socialTitle {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 20px;
+    color: #b39243;
+    margin-bottom: 10px;
+  }
+  
+  .socialDescription {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #f1e3c4;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    min-height: 70px;
+  }
+  
+  .socialStats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .statsNumber {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #b39243;
+  }
+  
+  .statsLabel {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 14px;
+    color: #f1e3c4;
+    opacity: 0.7;
+  }
+  
+  .joinBtn {
+    font-family: 'Cinzel', 'Garamond', serif;
+    text-align: center;
+    background: rgba(179, 146, 67, 0.1);
+    border: 1px solid rgba(179, 146, 67, 0.3);
+    padding: 10px;
+    font-weight: 600;
+    color: #b39243;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .socialCard:hover .joinBtn {
+    background: rgba(179, 146, 67, 0.2);
+    border-color: rgba(179, 146, 67, 0.5);
+  }
+  
+  /* Community Boxes */
+  .communityBoxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .newsletterBox,
+  .ambassadorBox {
+    background: rgba(39, 22, 41, 0.4);
+    border: 1px solid rgba(179, 146, 67, 0.2);
+    padding: 30px;
+    border-radius: 3px;
+  }
+  
+  .newsletterBox h3,
+  .ambassadorBox h3 {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 24px;
+    color: #b39243;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .newsletterBox h3::after,
+  .ambassadorBox h3::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 1px;
+    background: rgba(179, 146, 67, 0.4);
+  }
+  
+  .newsletterBox p,
+  .ambassadorBox p {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f1e3c4;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Newsletter Form */
+  .subscribeForm {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .subscribeForm input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid rgba(179, 146, 67, 0.3);
+    background: rgba(19, 12, 24, 0.5);
+    color: #f1e3c4;
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    border-radius: 2px 0 0 2px;
+  }
+  
+  .subscribeForm input::placeholder {
+    color: rgba(241, 227, 196, 0.5);
+  }
+  
+  .subscribeForm input:focus {
+    outline: none;
+    border-color: rgba(179, 146, 67, 0.6);
+  }
+  
+  .subscribeForm button {
+    padding: 12px 20px;
+    background: #b39243;
+    color: #18121e;
+    border: none;
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0 2px 2px 0;
+  }
+  
+  .subscribeForm button:hover {
+    background: #cea745;
+  }
+  
+  .privacyNote {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 13px;
+    color: #f1e3c4;
+    opacity: 0.6;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  /* Ambassador Box */
+  .ambassadorPerks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .perk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .perkIcon {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .perkText {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 14px;
+    color: #f1e3c4;
+    opacity: 0.9;
+  }
+  
+  .applyBtn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    background: #b39243;
+    color: #18121e;
+    border: none;
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .applyBtn:hover {
+    background: #cea745;
+    transform: translateY(-2px);
+  }
+  
+  /* Tweet Feed */
+  .tweetFeed {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .feedTitle {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 24px;
+    color: #b39243;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .feedTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: rgba(179, 146, 67, 0.4);
+  }
+  
+  .tweets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .tweet {
+    background: rgba(39, 22, 41, 0.4);
+    border: 1px solid rgba(179, 146, 67, 0.2);
+    padding: 20px;
+    border-radius: 3px;
+  }
+  
+  .tweetHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .tweetAvatar {
+    width: 40px;
+    height: 40px;
+    background: #b39243;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #18121e;
+  }
+  
+  .tweetAuthor {
+    flex: 1;
+  }
+  
+  .tweetName {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #f1e3c4;
+  }
+  
+  .tweetHandle {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: "14px";
+    color: #f1e3c4;
+    opacity: 0.7;
+  }
+  
+  .tweetLogo {
+    padding: 5px;
+  }
+  
+  .tweetContent {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f1e3c4;
+    margin-bottom: 15px;
+  }
+  
+  .tweetTime {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 14px;
+    color: #f1e3c4;
+    opacity: 0.6;
+    font-style: italic;
+  }
+  
+  .viewAllBtn {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 12px 0;
+    text-align: center;
+    background: rgba(179, 146, 67, 0.1);
+    color: #b39243;
+    border: 1px solid rgba(179, 146, 67, 0.3);
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .viewAllBtn:hover {
+    background: rgba(179, 146, 67, 0.2);
+    border-color: rgba(179, 146, 67, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  /* Decorations */
+  .communityDecoration {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='10' stroke='%23b39243' stroke-width='1' fill='none'/%3E%3Ccircle cx='50' cy='20' r='10' stroke='%23b39243' stroke-width='1' fill='none'/%3E%3Ccircle cx='80' cy='20' r='10' stroke='%23b39243' stroke-width='1' fill='none'/%3E%3Ccircle cx='35' cy='50' r='10' stroke='%23b39243' stroke-width='1' fill='none'/%3E%3Ccircle cx='65' cy='50' r='10' stroke='%23b39243' stroke-width='1' fill='none'/%3E%3Cpath d='M20 30 L35 40' stroke='%23b39243' stroke-width='1'/%3E%3Cpath d='M50 30 L42 40' stroke='%23b39243' stroke-width='1'/%3E%3Cpath d='M50 30 L58 40' stroke='%23b39243' stroke-width='1'/%3E%3Cpath d='M80 30 L65 40' stroke='%23b39243' stroke-width='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.05;
+    z-index: 0;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 991px) {
+    .socialsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .title {
+      font-size: 32px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .community {
+      padding: 100px 0 80px;
+    }
+  
+    .title {
+      font-size: 28px;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+    }
+  
+    .communityBoxes {
+      grid-template-columns: 1fr;
+    }
+  
+    .newsletterBox,
+    .ambassadorBox {
+      margin-bottom: 30px;
+    }
+  
+    .newsletterBox h3,
+    .ambassadorBox h3,
+    .feedTitle {
+      font-size: 22px;
+    }
+  
+    .newsletterBox p,
+    .ambassadorBox p {
+      font-size: 15px;
+    }
+  
+    .subscribeForm {
+      flex-direction: column;
+    }
+  
+    .subscribeForm input {
+      border-radius: 2px 2px 0 0;
+      margin-bottom: 1px;
+    }
+  
+    .subscribeForm button {
+      border-radius: 0 0 2px 2px;
+    }
+  
+    .communityDecoration {
+      opacity: 0.03;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .community {
+      padding: 80px 0 60px;
+    }
+  
+    .title {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+  
+    .socialsGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .socialDescription {
+      min-height: auto;
+    }
+  
+    .ambassadorPerks {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .tweet {
+      padding: 15px;
+    }
+  
+    .tweetContent {
+      font-size: 15px;
+    }
+  }

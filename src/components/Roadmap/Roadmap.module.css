@@ -1,0 +1,527 @@
+.roadmap {
+    position: relative;
+    padding: 120px 0 100px;
+    background: #18121e;
+    color: #f1e3c4;
+    overflow: hidden;
+  }
+  
+  .roadmap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 L90 10 L90 90 L10 90 Z' stroke='%23b39243' stroke-width='0.5' fill='none' opacity='0.05'/%3E%3Cpath d='M30 10 L30 90 M50 10 L50 90 M70 10 L70 90' stroke='%23b39243' stroke-width='0.3' opacity='0.05'/%3E%3Cpath d='M10 30 L90 30 M10 50 L90 50 M10 70 L90 70' stroke='%23b39243' stroke-width='0.3' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+  }
+  
+  .subtitle {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 18px;
+    color: #b39243;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #b39243;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+  }
+  
+  .titleDecoration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  
+  .titleDecoration span {
+    display: block;
+    height: 1px;
+  }
+  
+  .titleDecoration span:first-child,
+  .titleDecoration span:last-child {
+    background: #b39243;
+    width: 30px;
+    opacity: 0.7;
+  }
+  
+  .titleDecoration span:nth-child(2) {
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background: #b39243;
+    opacity: 0.9;
+  }
+  
+  .description {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+  
+  /* Timeline */
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .timelineRuler {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(to bottom, 
+      rgba(179, 146, 67, 0) 0%, 
+      rgba(179, 146, 67, 0.5) 5%,
+      rgba(179, 146, 67, 0.5) 95%,
+      rgba(179, 146, 67, 0) 100%
+    );
+    transform: translateX(-50%);
+  }
+  
+  .timelineItem {
+    position: relative;
+    margin-bottom: 70px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .timelineItem.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .timelineItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timelineItem.left {
+    padding-right: calc(50% + 30px);
+  }
+  
+  .timelineItem.right {
+    padding-left: calc(50% + 30px);
+  }
+  
+  .timelinePoint {
+    position: absolute;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    background: #b39243;
+    border-radius: 50%;
+    border: 3px solid #18121e;
+    box-shadow: 0 0 0 3px rgba(179, 146, 67, 0.3);
+    z-index: 1;
+  }
+  
+  .timelineItem.left .timelinePoint {
+    right: calc(50% - 10px);
+  }
+  
+  .timelineItem.right .timelinePoint {
+    left: calc(50% - 10px);
+  }
+  
+  .timelineContent {
+    background: rgba(39, 22, 41, 0.4);
+    border: 1px solid rgba(179, 146, 67, 0.2);
+    padding: 25px;
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .timelineContent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timelineItem.left .timelineContent::after,
+  .timelineItem.right .timelineContent::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    border: 10px solid transparent;
+  }
+  
+  .timelineItem.left .timelineContent::after {
+    right: -20px;
+    border-left-color: rgba(179, 146, 67, 0.2);
+  }
+  
+  .timelineItem.right .timelineContent::after {
+    left: -20px;
+    border-right-color: rgba(179, 146, 67, 0.2);
+  }
+  
+  .phaseLabel {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #b39243;
+    margin-bottom: 5px;
+  }
+  
+  .phaseTitle {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 22px;
+    color: #b39243;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .phaseTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(179, 146, 67, 0.3);
+  }
+  
+  .checklistItems {
+    margin: 20px 0;
+  }
+  
+  .checklistItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    opacity: 0.7;
+  }
+  
+  .checklistItem.completed {
+    opacity: 1;
+  }
+  
+  .checklistItem.active {
+    opacity: 0.9;
+  }
+  
+  .checklistItem:last-child {
+    margin-bottom: 0;
+  }
+  
+  .checkIcon {
+    width: 20px;
+    height: 20px;
+    background: rgba(179, 146, 67, 0.1);
+    border: 1px solid rgba(179, 146, 67, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #b39243;
+  }
+  
+  .checklistItem.completed .checkIcon {
+    background: rgba(179, 146, 67, 0.2);
+    border-color: rgba(179, 146, 67, 0.5);
+  }
+  
+  .checklistItem p {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .quarterLabel {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 16px;
+    color: #b39243;
+    text-align: right;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+  
+  /* Current Status */
+  .currentStatusBox {
+    background: rgba(39, 22, 41, 0.4);
+    border: 1px solid rgba(179, 146, 67, 0.2);
+    padding: 30px;
+    max-width: 700px;
+    margin: 80px auto 60px;
+    text-align: center;
+  }
+  
+  .statusLabel {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 20px;
+    color: #b39243;
+    margin-bottom: 20px;
+  }
+  
+  .statusIndicator {
+    max-width: 500px;
+    margin: 0 auto 20px;
+  }
+  
+  .statusBar {
+    height: 20px;
+    background: rgba(39, 22, 41, 0.6);
+    border: 1px solid rgba(179, 146, 67, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .statusProgress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(to right, #a3853b, #b39243, #cea745);
+    border-radius: 10px 0 0 10px;
+    animation: pulseGlow 2s infinite alternate;
+  }
+  
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(179, 146, 67, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 15px rgba(179, 146, 67, 0.8);
+    }
+  }
+  
+  .statusPercentage {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 16px;
+    color: #b39243;
+    margin-top: 10px;
+  }
+  
+  .statusNote {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #f1e3c4;
+    opacity: 0.8;
+    font-style: italic;
+  }
+  
+  /* Vision Statement */
+  .visionStatement {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+  }
+  
+  .quoteMarks {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-size: 100px;
+    line-height: 1;
+    color: rgba(179, 146, 67, 0.2);
+  }
+  
+  .visionStatement blockquote {
+    font-family: 'Cinzel', 'Garamond', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #b39243;
+    margin: 0 0 20px;
+    padding: 0 40px;
+    position: relative;
+  }
+  
+  .quoteAuthor {
+    font-family: 'Baskerville', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #f1e3c4;
+    opacity: 0.7;
+  }
+  
+  /* Decorations */
+  .mapDecoration,
+  .compassDecoration {
+    position: absolute;
+    opacity: 0.05;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .mapDecoration {
+    bottom: 10%;
+    right: 2%;
+    width: 300px;
+    height: 400px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10' y='10' width='80' height='100' stroke='%23b39243' stroke-width='2' fill='none'/%3E%3Cpath d='M20 10 L20 110 M40 10 L40 110 M60 10 L60 110 M80 10 L80 110' stroke='%23b39243' stroke-width='0.5' stroke-dasharray='2,4'/%3E%3Cpath d='M10 30 L90 30 M10 50 L90 50 M10 70 L90 70 M10 90 L90 90' stroke='%23b39243' stroke-width='0.5' stroke-dasharray='2,4'/%3E%3Ccircle cx='30' cy='40' r='3' fill='%23b39243'/%3E%3Ccircle cx='70' cy='80' r='3' fill='%23b39243'/%3E%3Cpath d='M30 40 L70 80' stroke='%23b39243' stroke-width='1' stroke-dasharray='4,4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .compassDecoration {
+    top: 15%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='45' stroke='%23b39243' stroke-width='2' fill='none'/%3E%3Ccircle cx='50' cy='50' r='5' stroke='%23b39243' stroke-width='1' fill='none'/%3E%3Cpath d='M50 10 L50 20 M50 80 L50 90 M10 50 L20 50 M80 50 L90 50' stroke='%23b39243' stroke-width='2'/%3E%3Cpath d='M50 20 L53 50 L50 80 M20 50 L50 47 L80 50' stroke='%23b39243' stroke-width='0.5'/%3E%3Ctext x='50' y='20' font-family='serif' font-size='10' fill='%23b39243' text-anchor='middle' dy='-5'>N</text>%3Ctext x='50' y='80' font-family='serif' font-size='10' fill='%23b39243' text-anchor='middle' dy='15'>S</text>%3Ctext x='20' y='50' font-family='serif' font-size='10' fill='%23b39243' text-anchor='middle' dx='-10'>W</text>%3Ctext x='80' y='50' font-family='serif' font-size='10' fill='%23b39243' text-anchor='middle' dx='10'>E</text>%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: slowRotate 60s linear infinite;
+  }
+  
+  @keyframes slowRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 991px) {
+    .title {
+      font-size: 32px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+  
+    .timeline {
+      max-width: 700px;
+    }
+  
+    .visionStatement blockquote {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .roadmap {
+      padding: 100px 0 80px;
+    }
+  
+    .title {
+      font-size: 28px;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+    }
+  
+    .timelineRuler {
+      left: 20px;
+    }
+  
+    .timelineItem.left,
+    .timelineItem.right {
+      padding-left: 50px;
+      padding-right: 0;
+    }
+  
+    .timelineItem.left .timelinePoint,
+    .timelineItem.right .timelinePoint {
+      left: 10px;
+      right: auto;
+    }
+  
+    .timelineItem.left .timelineContent::after,
+    .timelineItem.right .timelineContent::after {
+      left: -20px;
+      right: auto;
+      border-right-color: rgba(179, 146, 67, 0.2);
+      border-left-color: transparent;
+    }
+  
+    .visionStatement blockquote {
+      font-size: 18px;
+      padding: 0 20px;
+    }
+  
+    .quoteMarks {
+      font-size: 80px;
+    }
+  
+    .compassDecoration,
+    .mapDecoration {
+      opacity: 0.03;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .roadmap {
+      padding: 80px 0 60px;
+    }
+  
+    .title {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+  
+    .phaseTitle {
+      font-size: 20px;
+    }
+  
+    .checklistItem p {
+      font-size: 14px;
+    }
+  
+    .quarterLabel {
+      font-size: 14px;
+    }
+  
+    .statusLabel {
+      font-size: 18px;
+    }
+  
+    .visionStatement blockquote {
+      font-size: 16px;
+    }
+  
+    .quoteMarks {
+      font-size: 60px;
+    }
+  
+    .quoteAuthor {
+      font-size: 14px;
+    }
+  }
