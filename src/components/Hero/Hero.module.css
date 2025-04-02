@@ -356,8 +356,8 @@
   }
   
   .coin {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
     position: relative;
     transform-style: preserve-3d;
     transform: rotateY(20deg) rotateX(10deg);
@@ -405,7 +405,7 @@
     height: 100%;
     transform: rotateX(90deg);
     border-radius: 50%;
-    background: linear-gradient(to right, #a3853b 0%, #b39243 50%, #a3853b 100%);
+    /* background: linear-gradient(to right, #a3853b 0%, #b39243 50%, #a3853b 100%); */
     transform-origin: center;
   }
   
@@ -413,7 +413,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: linear-gradient(135deg, #b39243 0%, #cea745 100%);
+    /* background: linear-gradient(135deg, #b39243 0%, #cea745 100%); */
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
     position: relative;
     overflow: hidden;
@@ -421,6 +421,8 @@
   }
   
   .coinSymbol {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -431,7 +433,11 @@
     color: #271629;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   }
-  
+  .coinSymbol img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .coinPattern {
     position: absolute;
     top: 0;

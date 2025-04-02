@@ -12,43 +12,43 @@ const FAQ = () => {
   const faqItems = [
     {
       question: "What is $ASKOLD?",
-      answer: "$ASKOLD is a memecoin inspired by the legendary Prince Askold, one of the earliest rulers of Kievan Rus in the 9th century. It combines the fun and community aspects of memecoins with a historical theme based on ancient Rus heritage. The token features a 3% transaction tax (2% burned and 1% redistributed to holders), creating a deflationary model that rewards long-term holders."
+      answer: "$ASKOLD is a Solana-based memecoin paying tribute to the legendary Prince Askold, one of the foundational figures of Kyivan Rus. It fuses historical heritage with modern decentralized finance, backed by a deflationary token model featuring a 3% transaction tax—2% is burned and 1% redistributed to holders—encouraging long-term holding and active community participation."
     },
     {
       question: "How do I buy $ASKOLD?",
-      answer: "You can buy $ASKOLD on Uniswap using ETH. First, ensure you have a compatible wallet like MetaMask or Trust Wallet with ETH on the Ethereum network. Then visit Uniswap, connect your wallet, input the $ASKOLD contract address, set your desired amount, and complete the swap. We recommend setting slippage to 5-8% to account for the tokenomics. Detailed instructions are available in our 'How to Buy' section."
+      answer: "You can buy $ASKOLD on decentralized exchanges like Jupiter or Raydium on the Solana blockchain. First, install a Solana-compatible wallet such as Phantom or Solflare, top up your wallet with SOL for the purchase and transaction fees, then navigate to Jupiter or Raydium, paste the $ASKOLD token address, and complete the swap."
     },
     {
       question: "What makes $ASKOLD different from other memecoins?",
-      answer: "Unlike many memecoins that lack substance, $ASKOLD draws inspiration from actual history - the story of Prince Askold who led Vikings to establish the early foundations of Kievan Rus. We've built a strong community focused on the long-term vision with tokenomics that reward holders through the automatic burn and redistribution mechanism. Our roadmap includes community governance, NFT collections, and strategic partnerships that will continue to build value around the $ASKOLD ecosystem."
+      answer: "$ASKOLD is more than just a meme—it's a cultural movement rooted in the historical figure of Prince Askold. The project is built with real community involvement, deflationary mechanics, and a long-term vision that includes governance, NFT collections, and partnerships. Our mission is to combine historical storytelling with blockchain innovation to create a legacy."
     },
     {
       question: "Is the $ASKOLD contract audited?",
-      answer: "Yes, the $ASKOLD smart contract has been fully audited by [Audit Firm Name], a respected security firm in the blockchain space. The audit verified that our contract is secure, properly implemented, and that the tokenomics function as described. The full audit report is available on our website and can be accessed from the 'Documents' section."
+      answer: "Yes, the $ASKOLD contract on Solana has undergone a full security audit to ensure it functions as intended and poses no security risks. The audit was conducted by a trusted third-party firm and is publicly accessible via our website in the 'Documents' section."
     },
     {
       question: "What is the total supply of $ASKOLD tokens?",
-      answer: "The total supply of $ASKOLD is 862,000,000 tokens, inspired by the year 862 AD when Prince Askold is believed to have taken control of Kyiv. Of this, 2,000,000 tokens have already been permanently burned at launch. Additionally, 2% of every transaction is automatically burned, continuously reducing the supply over time and increasing scarcity."
+      answer: "The total supply of $ASKOLD is 862,000,000 tokens, symbolizing the year 862 AD when Askold arrived in Kyiv. At launch, 2,000,000 tokens were burned, and with each transaction, 2% continues to be burned, making the token increasingly scarce."
     },
     {
       question: "How is the 3% transaction tax distributed?",
-      answer: "The 3% transaction tax is divided as follows: 2% is automatically burned, permanently removing these tokens from circulation and reducing the total supply, which can lead to increased scarcity over time. The remaining 1% is redistributed to all existing token holders proportional to their holdings, rewarding those who maintain their investment in $ASKOLD."
+      answer: "From every transaction, 2% of $ASKOLD is automatically burned, reducing total supply. The remaining 1% is distributed proportionally to all current holders, rewarding those who continue to hold and support the project."
     },
     {
       question: "When was $ASKOLD launched?",
-      answer: "$ASKOLD was launched in Q2 2025. The project has completed its initial development phase, including smart contract development, security audit, website launch, and community building. We are currently in Phase II of our roadmap, expanding our presence across various platforms and exchanges."
+      answer: "$ASKOLD was launched in Q2 2025 on the Solana blockchain. Following the successful deployment of the smart contract, the team launched the official website, opened community channels, and began building awareness through social media and community marketing."
     },
     {
       question: "Are there any restrictions on buying or selling $ASKOLD?",
-      answer: "To protect against market manipulation, we've implemented a maximum transaction limit of 8,620,000 $ASKOLD tokens per transaction (approximately 1% of the total supply). Besides this anti-whale mechanism, there are no restrictions on buying or selling. The 3% transaction tax applies to all transactions equally."
+      answer: "Yes, in order to prevent market manipulation and protect the community, there's a transaction cap of 8,620,000 tokens per transaction—representing 1% of the total supply. This anti-whale mechanism ensures fair distribution and trading behavior."
     },
     {
       question: "How can I join the $ASKOLD community?",
-      answer: "We have an active community across multiple platforms including Telegram, Twitter, Discord, and Reddit. You can find links to all our social platforms in the 'Community' section of our website. Join us to participate in discussions, receive the latest updates, and potentially participate in community events and giveaways."
+      answer: "Join our vibrant community on Telegram, Discord, and Twitter to connect with other holders, get real-time updates, participate in AMAs, events, and help shape the future of $ASKOLD. Links are available in the 'Community' section of our site."
     },
     {
       question: "What are the long-term goals for $ASKOLD?",
-      answer: "Our vision extends far beyond being just another memecoin. We're building a community-driven ecosystem inspired by the conquering spirit of Prince Askold. Our roadmap includes launching an NFT collection featuring ancient Rus themes, implementing DAO governance for community decisions, expanding to multiple blockchains, organizing real-world events, and establishing partnerships with historical and educational organizations. We aim to become a recognized brand that bridges crypto culture with historical appreciation."
+      answer: "$ASKOLD aims to be more than a memecoin. Our long-term vision includes launching an NFT collection rooted in Slavic heritage, building a DAO for community governance, expanding cross-chain, hosting real-world meetups, and collaborating with educational institutions to preserve and promote Eastern European history through blockchain."
     }
   ];
 
@@ -62,8 +62,7 @@ const FAQ = () => {
             <span></span><span></span><span></span>
           </div>
           <p className={styles.description}>
-            Find answers to the most common questions about $ASKOLD token. 
-            If you can't find what you're looking for, reach out to our community on Telegram or Discord.
+            Find answers to the most frequently asked questions about $ASKOLD on the Solana blockchain. If you still need help, feel free to contact our moderators or join our community chat.
           </p>
         </div>
 
@@ -89,11 +88,11 @@ const FAQ = () => {
             </div>
           ))}
         </div>
-        
+
         <div className={styles.supportBox}>
           <div className={styles.supportContent}>
             <h3>Still have questions?</h3>
-            <p>Our community managers and team are always happy to help with any questions you might have.</p>
+            <p>Our team and community moderators are always here to help. Join us on Telegram or Discord to get real-time support and updates.</p>
             <div className={styles.supportButtons}>
               <a href="https://t.me/askoldcoin" target="_blank" rel="noopener noreferrer" className={styles.supportBtn}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -115,7 +114,6 @@ const FAQ = () => {
           <div className={styles.supportDecoration}></div>
         </div>
       </div>
-      
       <div className={styles.scrollDecoration}></div>
     </section>
   );

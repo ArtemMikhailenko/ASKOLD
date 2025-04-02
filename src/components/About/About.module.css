@@ -183,7 +183,7 @@
   
   .imageWrapper {
     position: relative;
-    height: 350px;
+    height: 550px;
   }
   
   .imagePlaceholder {
@@ -197,7 +197,11 @@
     justify-content: center;
     overflow: hidden;
   }
-  
+  .imagePlaceholder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .princeSilhouette {
     width: 70%;
     height: 90%;

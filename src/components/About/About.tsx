@@ -60,7 +60,7 @@ const About = () => {
           <div className={styles.imageColumn}>
             <div className={styles.imageWrapper}>
               <div className={styles.imagePlaceholder}>
-                <div className={styles.princeSilhouette}></div>
+                <img src="/hero.png" alt="" />
               </div>
               <div className={styles.imageDecoration}></div>
             </div>

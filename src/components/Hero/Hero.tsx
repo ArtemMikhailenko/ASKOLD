@@ -117,7 +117,9 @@ const Hero = () => {
             <div className={styles.coin} ref={coinRef}>
               <div className={styles.coinFront}>
                 <div className={styles.coinCircle}>
-                  <div className={styles.coinSymbol}>A</div>
+                  <div className={styles.coinSymbol}>
+                    <img src="/logo.png" alt="" />
+                  </div>
                   <div className={styles.coinPattern}></div>
                 </div>
               </div>
@@ -126,7 +128,6 @@ const Hero = () => {
                   <div className={styles.coinProfile}></div>
                 </div>
               </div>
-              <div className={styles.coinEdge}></div>
             </div>
             <div className={styles.coinGlow}></div>
           </div>

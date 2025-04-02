@@ -6,7 +6,6 @@ const Roadmap = () => {
   const timelineRef = useRef(null);
 
   useEffect(() => {
-    // Animation for the timeline items
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -37,156 +36,156 @@ const Roadmap = () => {
             <span></span><span></span><span></span>
           </div>
           <p className={styles.description}>
-            Like Prince Askold's conquest strategy, our roadmap outlines a bold vision for $ASKOLD. 
-            Each milestone represents a step towards building a strong community and establishing $ASKOLD 
-            as a prominent memecoin in the crypto realm.
+            Just like Prince Askold charted his legendary path through history, our roadmap for $ASKOLD on Solana
+            charts a bold and strategic journey from inception to long-term dominance in the blockchain ecosystem.
+            Every milestone represents a key battle in our conquest to make $ASKOLD a globally recognized token with real impact.
           </p>
         </div>
 
         <div className={styles.timeline} ref={timelineRef}>
           <div className={styles.timelineRuler}></div>
-          
+
           {/* Phase 1 */}
           <div className={`${styles.timelineItem} ${styles.left}`}>
             <div className={styles.timelineContent}>
               <div className={styles.phaseLabel}>Phase I</div>
-              <h3 className={styles.phaseTitle}>Foundation</h3>
+              <h3 className={styles.phaseTitle}>Laying the Foundation</h3>
               <div className={styles.checklistItems}>
                 <div className={`${styles.checklistItem} ${styles.completed}`}>
                   <div className={styles.checkIcon}>✓</div>
-                  <p>Smart Contract Development & Audit</p>
+                  <p>Development and Deployment of $ASKOLD Smart Contract on Solana</p>
                 </div>
                 <div className={`${styles.checklistItem} ${styles.completed}`}>
                   <div className={styles.checkIcon}>✓</div>
-                  <p>Website Launch</p>
+                  <p>Official Website and Branding Launch</p>
                 </div>
                 <div className={`${styles.checklistItem} ${styles.completed}`}>
                   <div className={styles.checkIcon}>✓</div>
-                  <p>Social Media Establishment</p>
+                  <p>Establishment of Twitter, Telegram, and Discord Channels</p>
                 </div>
                 <div className={`${styles.checklistItem} ${styles.active}`}>
                   <div className={styles.checkIcon}>⌛</div>
-                  <p>Community Building</p>
+                  <p>Community Engagement and Early Adopter Incentives</p>
                 </div>
               </div>
               <div className={styles.quarterLabel}>Q2 2025</div>
             </div>
             <div className={styles.timelinePoint}></div>
           </div>
-          
+
           {/* Phase 2 */}
           <div className={`${styles.timelineItem} ${styles.right}`}>
             <div className={styles.timelineContent}>
               <div className={styles.phaseLabel}>Phase II</div>
-              <h3 className={styles.phaseTitle}>Territory Expansion</h3>
+              <h3 className={styles.phaseTitle}>Market Penetration</h3>
               <div className={styles.checklistItems}>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>Token Launch on Uniswap</p>
+                  <p>Token Listing on Jupiter and Raydium</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>Marketing Campaign</p>
+                  <p>Full-scale Digital Marketing Campaign Across Crypto Channels</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>1,000+ Holders Milestone</p>
+                  <p>Reaching First 1,000 Holders</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>CoinGecko & CoinMarketCap Listings</p>
+                  <p>Listings on CoinGecko and CoinMarketCap</p>
                 </div>
               </div>
               <div className={styles.quarterLabel}>Q3 2025</div>
             </div>
             <div className={styles.timelinePoint}></div>
           </div>
-          
+
           {/* Phase 3 */}
           <div className={`${styles.timelineItem} ${styles.left}`}>
             <div className={styles.timelineContent}>
               <div className={styles.phaseLabel}>Phase III</div>
-              <h3 className={styles.phaseTitle}>Strategic Alliances</h3>
+              <h3 className={styles.phaseTitle}>Strengthening the Ecosystem</h3>
               <div className={styles.checklistItems}>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>CEX Listings</p>
+                  <p>Listing $ASKOLD on Tier 2 Centralized Exchanges</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>NFT Collection Launch</p>
+                  <p>Launch of Official $ASKOLD NFT Collection on Solana</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>Strategic Partnerships</p>
+                  <p>Formation of Strategic Partnerships with Web3 Projects</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>10,000+ Holders Milestone</p>
+                  <p>Growing the Community to 10,000+ Verified Holders</p>
                 </div>
               </div>
               <div className={styles.quarterLabel}>Q4 2025</div>
             </div>
             <div className={styles.timelinePoint}></div>
           </div>
-          
+
           {/* Phase 4 */}
           <div className={`${styles.timelineItem} ${styles.right}`}>
             <div className={styles.timelineContent}>
               <div className={styles.phaseLabel}>Phase IV</div>
-              <h3 className={styles.phaseTitle}>Empire Building</h3>
+              <h3 className={styles.phaseTitle}>Decentralization & Utility</h3>
               <div className={styles.checklistItems}>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>DAO Governance Implementation</p>
+                  <p>Implementation of DAO Governance for $ASKOLD Holders</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>Cross-Chain Expansion</p>
+                  <p>Exploration and Pilot of Cross-Chain Interoperability</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>Real-World Events & Meetups</p>
+                  <p>Launch of Community Meetups and Web3 Educational Events</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>Charitable Initiatives</p>
+                  <p>Charity Collaborations and Blockchain for Good Campaigns</p>
                 </div>
               </div>
               <div className={styles.quarterLabel}>Q1 2026</div>
             </div>
             <div className={styles.timelinePoint}></div>
           </div>
-          
+
           {/* Phase 5 */}
           <div className={`${styles.timelineItem} ${styles.left}`}>
             <div className={styles.timelineContent}>
               <div className={styles.phaseLabel}>Phase V</div>
-              <h3 className={styles.phaseTitle}>Legacy & Beyond</h3>
+              <h3 className={styles.phaseTitle}>Global Adoption & Legacy</h3>
               <div className={styles.checklistItems}>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>Metaverse Integration</p>
+                  <p>Integration of $ASKOLD into Metaverse Ecosystems</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>100,000+ Holders Milestone</p>
+                  <p>Achieving 100,000+ Holder Milestone Globally</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>DeFi Product Suite</p>
+                  <p>Development of DeFi Tools Powered by $ASKOLD</p>
                 </div>
                 <div className={styles.checklistItem}>
                   <div className={styles.checkIcon}></div>
-                  <p>Global Community Expansion</p>
+                  <p>Global Expansion and Cultural Integration of the $ASKOLD Brand</p>
                 </div>
               </div>
-              <div className={styles.quarterLabel}>Q2-Q4 2026</div>
+              <div className={styles.quarterLabel}>Q2–Q4 2026</div>
             </div>
             <div className={styles.timelinePoint}></div>
           </div>
         </div>
-        
+
         <div className={styles.currentStatusBox}>
           <div className={styles.statusLabel}>Current Status:</div>
           <div className={styles.statusIndicator}>
@@ -196,21 +195,21 @@ const Roadmap = () => {
             <div className={styles.statusPercentage}>25% Complete</div>
           </div>
           <p className={styles.statusNote}>
-            Follow our journey on social media to stay updated with the latest developments and milestone achievements.
+            Stay informed and be part of the revolution — follow us on Twitter, Discord, and Telegram to witness how each milestone brings us closer to establishing a new legacy for $ASKOLD on Solana.
           </p>
         </div>
-        
+
         <div className={styles.visionStatement}>
-          <div className={styles.quoteMarks}>"</div>
+          <div className={styles.quoteMarks}>
+            "
+          </div>
           <blockquote>
-            Just as Prince Askold laid the foundation for Kyivan Rus', we are building a strong and 
-            lasting presence in the crypto realm. Our roadmap isn't just about milestones; 
-            it's about creating a legacy.
+            Just as Prince Askold laid the foundation for the formation of the Kyivan Rus', our mission with $ASKOLD is to create a lasting and respected digital legacy. This roadmap is not just about features — it's about vision, values, and victory.
           </blockquote>
-          <div className={styles.quoteAuthor}>— $ASKOLD Team</div>
+          <div className={styles.quoteAuthor}>— $ASKOLD Core Team</div>
         </div>
       </div>
-      
+
       <div className={styles.mapDecoration}></div>
       <div className={styles.compassDecoration}></div>
     </section>
