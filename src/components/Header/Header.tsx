@@ -51,6 +51,13 @@ const Header = () => {
     }
   };
 
+  // Function to open whitepaper in new tab
+  const openWhitepaper = () => {
+    // You can replace this with a direct PDF link or route to whitepaper page
+    window.open('/whitepaper.pdf', '_blank');
+    handleLinkClick();
+  };
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.runicBorder}></div>
@@ -115,6 +122,17 @@ const Header = () => {
                 Roadmap
                 <span className={styles.linkHover}></span>
               </Link>
+            </li>
+            <li>
+              <button 
+                onClick={openWhitepaper}
+                className={styles.whitepaperBtn}
+              >
+                <span className={styles.whitepaperIcon}>📄</span>
+                Whitepaper
+                <span className={styles.whitepaperBadge}>NEW</span>
+                <span className={styles.linkHover}></span>
+              </button>
             </li>
             <li>
               <Link 
